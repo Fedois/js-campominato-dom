@@ -36,11 +36,22 @@ main{
     justify-content: space-around;
     align-items: center;
 }
-.container{
+
+/* container sx */
+.container-sx{
     height: 70vh;
     width: 70vh;
     display: flex;
     flex-wrap: wrap;border: 2px solid white;
+    position: relative;
+}
+.transparent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
 }
 .square{
     width: calc(100% / 10);
@@ -63,9 +74,30 @@ main{
     background-color: red;
     color: white;
 }
-.result{
+
+/* container dx */
+.container-dx{
+    width: 400px;
+    height: 300px;
     color: white;
-    padding: 3rem;
+    position: relative;
+}
+.container-dx h2{
+    font-size: 3em;
+}
+.container-dx h3{
+    font-size: 3em;
+    color: red;
+}
+.container-dx h4{
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(-50%);
 }
 
 /* FOOTER */

@@ -1,8 +1,14 @@
-const container = document.querySelector('.container');
+const containerSx = document.querySelector('.container-sx');
 
 const arrayBomb = [];
 
 let punteggio = 1;
+
+let spanPunteggio = document.querySelector('span')
+
+const winELose = document.querySelector('.win-e-lose');
+
+const playAgain = document.querySelector('.again')
 
 console.log('numero bombe:', arrayBomb)
 
@@ -22,12 +28,16 @@ for(let j = 1; j <= 16; j++){
 const play = document.querySelector('button')
 play.addEventListener('click', function(){
 
-    container.innerHTML = ''
+    
+    containerSx.innerHTML = '';
+    winELose.innerHTML = '';
+    spanPunteggio.innerHTML = '';
+    playAgain.innerHTML = '';
     
     for(let i = 1; i <= 100; i++){
         
         const square = createSquare(i)
-        container.append(square)
+        containerSx.append(square)
     
     }
 })
@@ -50,13 +60,20 @@ function createSquare(number) {
         
         if(arrayBomb.includes(currNum)){
             this.classList.add('bomb');
+
+            winELose.innerHTML = 'HAI PERSO';
+            playAgain.innerHTML = 'per giocare di nuovo clicca su "play"';
+
+            const divTransp = document.createElement('div');
+            divTransp.className = 'transparent'
+            containerSx.append(divTransp)
             
         }
         else{
             
             for(let p = 0; p < 1; p++){
                 
-                const spanPunteggio = document.querySelector('span').innerHTML = punteggio
+                spanPunteggio.innerHTML = punteggio
                 this.classList.add('click');
                 punteggio++
             

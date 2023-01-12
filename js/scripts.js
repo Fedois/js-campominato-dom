@@ -23,7 +23,6 @@ for(let j = 1; j <= 16; j++){
     }
         
     arrayBomb.push(bomb);
-
 }
 
 numPunteggio.innerHTML = 'clicca su "play" per giocare'
@@ -78,7 +77,7 @@ function createSquare(number) {
             
             for(let p = 0; p < 1; p++){
                 
-                numPunteggio.innerHTML = 'PUNTEGGIO: ' + punteggio;
+                numPunteggio.innerHTML = 'SCORE: ' + punteggio;
                 this.classList.add('safe');
                 punteggio++
 

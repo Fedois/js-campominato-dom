@@ -4,7 +4,7 @@ const arrayBomb = [];
 
 let punteggio = 1;
 
-let spanPunteggio = document.querySelector('span')
+let numPunteggio = document.querySelector('h2')
 
 const Lose = document.querySelector('.lose');
 const win = document.querySelector('.win')
@@ -26,14 +26,17 @@ for(let j = 1; j <= 16; j++){
 
 }
 
+numPunteggio.innerHTML = 'clicca su "play" per giocare'
+
 const play = document.querySelector('button')
 play.addEventListener('click', function(){
 
     
     containerSx.innerHTML = '';
+    punteggio = 1;
     Lose.innerHTML = '';
     win.innerHTML = '';
-    spanPunteggio.innerHTML = '';
+    numPunteggio.innerHTML = '';
     playAgain.innerHTML = '';
     
     for(let i = 1; i <= 100; i++){
@@ -75,8 +78,8 @@ function createSquare(number) {
             
             for(let p = 0; p < 1; p++){
                 
-                spanPunteggio.innerHTML = punteggio
-                this.classList.add('click');
+                numPunteggio.innerHTML = 'PUNTEGGIO: ' + punteggio;
+                this.classList.add('safe');
                 punteggio++
 
                 if(punteggio == 85){

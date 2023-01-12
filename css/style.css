@@ -81,13 +81,18 @@ main{
     height: 300px;
     color: white;
     position: relative;
+    text-align: center;
 }
 .container-dx h2{
     font-size: 3em;
 }
-.container-dx h3{
+.lose{
     font-size: 3em;
     color: red;
+}
+.win{
+    font-size: 3em;
+    color: green;
 }
 .container-dx h4{
     font-size: 1.5em;

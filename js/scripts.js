@@ -6,7 +6,8 @@ let punteggio = 1;
 
 let spanPunteggio = document.querySelector('span')
 
-const winELose = document.querySelector('.win-e-lose');
+const Lose = document.querySelector('.lose');
+const win = document.querySelector('.win')
 
 const playAgain = document.querySelector('.again')
 
@@ -30,7 +31,8 @@ play.addEventListener('click', function(){
 
     
     containerSx.innerHTML = '';
-    winELose.innerHTML = '';
+    Lose.innerHTML = '';
+    win.innerHTML = '';
     spanPunteggio.innerHTML = '';
     playAgain.innerHTML = '';
     
@@ -61,7 +63,7 @@ function createSquare(number) {
         if(arrayBomb.includes(currNum)){
             this.classList.add('bomb');
 
-            winELose.innerHTML = 'HAI PERSO';
+            Lose.innerHTML = 'HAI PERSO';
             playAgain.innerHTML = 'per giocare di nuovo clicca su "play"';
 
             const divTransp = document.createElement('div');
@@ -76,6 +78,17 @@ function createSquare(number) {
                 spanPunteggio.innerHTML = punteggio
                 this.classList.add('click');
                 punteggio++
+
+                if(punteggio == 85){
+                    
+                    win.innerHTML = 'HAI VINTO';
+                    playAgain.innerHTML = 'per giocare di nuovo clicca su "play"';
+
+                    const divTransp = document.createElement('div');
+                    divTransp.className = 'transparent';
+                    containerSx.append(divTransp);
+                
+                }
             
             }
         }

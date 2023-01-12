@@ -91,7 +91,6 @@ function createSquare(number) {
                     containerSx.append(divTransp);
                 
                 }
-            
             }
         }
         

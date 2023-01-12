@@ -2,14 +2,16 @@ const container = document.querySelector('.container');
 
 const arrayBomb = [];
 
+let punteggio = 1;
+
 console.log('numero bombe:', arrayBomb)
 
 for(let j = 1; j <= 16; j++){
-    let bomb = getRandomNumber(1, 16);
+    let bomb = getRandomNumber(1, 100);
 
     while(arrayBomb.includes(bomb)){
         
-        bomb = getRandomNumber(1, 16);
+        bomb = getRandomNumber(1, 100);
 
     }
         
@@ -19,8 +21,8 @@ for(let j = 1; j <= 16; j++){
 
 const play = document.querySelector('button')
 play.addEventListener('click', function(){
-    
-container.innerHTML = ''
+
+    container.innerHTML = ''
     
     for(let i = 1; i <= 100; i++){
         
@@ -43,15 +45,22 @@ function createSquare(number) {
 
     newSquare.addEventListener('click', function () {
 
-        let currNum = this.innerText;
+        let currNum = parseInt(this.innerText);
         console.log(currNum)
         
         if(arrayBomb.includes(currNum)){
-            this.classList.add('bomb')
-            //codice di fine partita
+            this.classList.add('bomb');
+            
         }
         else{
-            this.classList.add('click')
+            
+            for(let p = 0; p < 1; p++){
+                
+                const spanPunteggio = document.querySelector('span').innerHTML = punteggio
+                this.classList.add('click');
+                punteggio++
+            
+            }
         }
         
     })

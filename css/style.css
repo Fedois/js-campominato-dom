@@ -33,7 +33,7 @@ header{
 main{
     height: 80vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .container{
@@ -62,6 +62,10 @@ main{
 .bomb{
     background-color: red;
     color: white;
+}
+.result{
+    color: white;
+    padding: 3rem;
 }
 
 /* FOOTER */

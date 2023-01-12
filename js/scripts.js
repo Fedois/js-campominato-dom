@@ -47,7 +47,7 @@ function createSquare(number) {
         console.log(currNum)
         
         if(arrayBomb.includes(currNum)){
-            this.classList.add('click')
+            this.classList.add('bomb')
             //codice di fine partita
         }
         else{

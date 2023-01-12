@@ -40,7 +40,7 @@ main{
     height: 70vh;
     width: 70vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;border: 2px solid white;
 }
 .square{
     width: calc(100% / 10);
@@ -50,6 +50,7 @@ main{
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    user-select: none;
 }
 .square:hover{
     cursor: pointer;

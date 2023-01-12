@@ -1,10 +1,8 @@
 const container = document.querySelector('.container');
 
 const arrayBomb = [];
-console.log('numero bombe:', arrayBomb)
 
-const arrayNum = [];
-console.log('numero celle:', arrayNum);
+console.log('numero bombe:', arrayBomb)
 
 for(let j = 1; j <= 16; j++){
     let bomb = getRandomNumber(1, 16);
@@ -28,8 +26,6 @@ container.innerHTML = ''
         
         const square = createSquare(i)
         container.append(square)
-
-        arrayNum.push(i)
     
     }
 })
@@ -47,10 +43,12 @@ function createSquare(number) {
 
     newSquare.addEventListener('click', function () {
 
-        console.log(this.innerText);
-        if(arrayNum.includes(arrayBomb)){
-            this.classList.add('bomb')
-            console.log(this)
+        let currNum = this.innerText;
+        console.log(currNum)
+        
+        if(arrayBomb.includes(currNum)){
+            this.classList.add('click')
+            //codice di fine partita
         }
         else{
             this.classList.add('click')

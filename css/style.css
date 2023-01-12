@@ -59,6 +59,10 @@ main{
     background-color: green;
     color: white;
 }
+.bomb{
+    background-color: red;
+    color: white;
+}
 
 /* FOOTER */
 footer{

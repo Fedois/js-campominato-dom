@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-    <title>campo minato DOM</title>
+    <title>campo minatois</title>
 </head>
 <body>
     <header class="container-small">
         <div class="title">
-            <h1>Campo Minato</h1>
+            <h1>Campo Minatois</h1>
         </div>
 
         <div class="play">
+            <select>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
             <button>play</button>
         </div>
     </header>
@@ -24,16 +29,17 @@
     <main>
        
         <div class="container-sx">
-            
+            <!-- grid  -->
         </div>
-        
-        
 
         <div class="container-dx">
-            <h2></h2>
-            <h3 class="lose"></h3>
-            <h3 class="win"></h3>
-            <h4 class="again"></h4>
+            <p class="info-level">there are <strong class="info-num-bomb">16 bombs</strong> inside <strong class="info-num-square">100 squares</strong></p>
+            <div class="box">
+                <h2>Clicca "play" per giocare</h2>
+                <h3 class="result"></h3>
+                <h4 class="again"></h4>
+            </div>
+            <div class="view-bomb">view bombs</div>
         </div>
 
     </main>
@@ -41,7 +47,7 @@
     <footer class="container-small">
         <p>
             Made with &hearts; by 
-            <a href="#">Boolean</a>
+            <a href="#">Fois</a>
         </p>
     </footer>
     

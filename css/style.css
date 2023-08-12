@@ -27,6 +27,13 @@ header{
     width: 100%;
     justify-content: space-between;
 }
+.play {
+    display: flex;
+}
+.play > select{
+    padding: 5px;
+    font-size: 1em;
+}
 .play > button{
     padding: 2px 20px;
     font-size: 1.5em;
@@ -57,8 +64,6 @@ main{
     background-color: transparent;
 }
 .square{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 2px solid white;
     display: flex;
     justify-content: center;
@@ -67,7 +72,7 @@ main{
 }
 .square:hover{
     cursor: pointer;
-    opacity: 0.5;
+    color: white;
 }
 .safe{
     background-color: green;
@@ -79,10 +84,24 @@ main{
 }
 
 /* container dx */
-.container-dx{
+.container-dx {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-level{
+    margin-bottom: 1rem;
+}
+.info-num-bomb{
+    color: red;
+}
+.info-num-square {
+    color: greenyellow;
+}
+.box{
     width: 400px;
     height: 300px;
-    color: white;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
@@ -90,23 +109,28 @@ main{
     justify-content: space-around;
     padding: 3rem 1rem;
 }
-.container-dx h2{
+.box h2{
     font-size: 3em;
 }
 h3{
     margin: 1rem 0;
 }
-.lose{
+.result{
     font-size: 3em;
-    color: red;
 }
-.win{
-    font-size: 3em;
-    color: green;
-}
-.container-dx h4{
+.box h4{
     font-size: 1.5em;
-    color: white;
+}
+.view-bomb{
+    margin-top: 1rem;
+    padding: 3px;
+    border: 1px solid white;
+    display: none;
+    transition: all 0.25s;
+}
+.view-bomb:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* FOOTER */
